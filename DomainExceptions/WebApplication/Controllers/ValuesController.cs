@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Web.Http;
 
 namespace WebApplication.Controllers
@@ -15,10 +11,12 @@ namespace WebApplication.Controllers
             return new string[] { "value1", "value2" };
         }
 
-        // GET api/values/5
+        // GET api/values/500
+        [MyHttpExceptionFilter]
         public string Get(int id)
         {
-            return "value";
+            // throw new HttpResponseException((HttpStatusCode)id);
+            throw new MyHttpException(id);
         }
 
         // POST api/values
