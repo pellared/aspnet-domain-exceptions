@@ -1,5 +1,5 @@
-# Domain exceptions ASP.NET
+# Exceptions vs HTTP status codes
 
-This repository contains multiple ways to add handlers
-for domain exceptions
+This repository contains some examples to test
+.NET exceptions vs HTTP status codes
 in ASP.NET applications.
